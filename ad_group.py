@@ -33,7 +33,7 @@ if uploaded_file is not None:
 
     # 显示结果表格
     st.write("Classified Data")
-    st.dataframe(data[['SKU', 'CTR', 'Conversion_Rate', 'ACOS', 'Group']])
+    st.dataframe(data[['SKU', 'ASIN', 'CTR', 'Conversion_Rate', 'ACOS', 'Group']])
 
     # 提供下载选项
     csv = data.to_csv(index=False).encode('utf-8')
