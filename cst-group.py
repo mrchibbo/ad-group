@@ -16,7 +16,7 @@ if uploaded_file is not None:
     data['Conversion_Rate'] = data['7 Day Total Orders (#)'] / data['Clicks']
     data['CTR'] = data['Clicks'] / data['Impressions']
     data['CPC'] = data['Spend'] / data['Clicks']
-    data['ACOS'] = data['Spend'] / data['7 Day Total Sales ']
+    data['ACOS'] = data['Spend'] / data['7 Day Total Sales']
     data['Performance'] = data['CTR'] * data['Conversion_Rate'] / data['ACOS']
 
     # 设定阈值
