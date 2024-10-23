@@ -10,7 +10,8 @@ uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 if uploaded_file is not None:
     # 读取上传的文件
     data = pd.read_csv(uploaded_file)
-
+    # 清除表头的空格
+    data.columns = data.columns.str.strip()
     # 计算转化率和表现指标
     data['Conversion_Rate'] = data['7 Day Total Orders (#)'] / data['Clicks']
     data['CTR'] = data['Clicks'] / data['Impressions']
